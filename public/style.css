@@ -1,0 +1,416 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+}
+
+.heading {
+    color: rgb(247, 165, 88);
+}
+
+.info-container {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.info-container > * {
+    display: inline-block;
+}
+
+.info-container:after {
+    clear: both;
+}
+
+.score-container {
+    display: none;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: rgb(238, 130, 63);
+}
+
+.score, .score-value {
+    display: block;
+}
+
+.best-score-container {
+    display: block;
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(238, 130, 63);
+}
+
+.best-score, .best-score-value {
+    display: block;
+}
+
+.title {
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(255, 104, 73);
+    font-size: 60px;
+    margin-top: 20vh;
+    margin-bottom: 0;
+}
+
+.game-desc {
+    display: block;
+    text-align: center;
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: calc(1em + 1vmin);
+    text-align: center;
+    margin-top: 0;
+}
+
+.start-btn {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 50px;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    border-radius: 5px;
+    background-color: rgb(219, 192, 72);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.footer {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.timer-container {
+    display: none;
+    height: 1.2vmin;
+    border: 1px solid rgb(254, 212, 156);
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    visibility: visible;
+}
+
+.timer {
+    height: 100%;
+    background-color: rgb(254, 212, 156);
+}
+
+.game-container {
+    display: block;
+}
+
+.current-coloredword {
+    display: block;
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 64px;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px) {
+    .current-coloredword {
+        margin-top: 30px;
+    }
+}
+
+.choices-container {
+    display: block;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    margin: 3em 0;
+}
+
+.choices-container li {
+    margin-bottom: 2vh;
+    text-align: center;
+    list-style: none;
+}
+
+.choices-container p {
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    width: 140px;
+    margin: auto;
+    font-size: 5vh;
+    color: rgb(208, 172, 122);
+    cursor: pointer;
+}
+
+.leaderboard-container, .about-container, .settings-container, .gameover-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.leaderboard-container {
+    display: none;
+}
+
+.about-container {
+    display: none;
+}
+
+.settings-container {
+    display: none;
+}
+
+.gameover-container {
+    display: none;
+}
+
+.leaderboard-modal, .about-modal, .settings-modal, .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    padding: 25px 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgb(251, 246, 240);
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 480px) {
+    .leaderboard-modal, .modal, .about-modal, .settings-modal {
+        width: 450px;
+    }
+}
+
+.coming-soon {
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 2.4vh;
+    color: rgb(208, 172, 122);
+}
+
+.about-text {
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 2.4vh;
+    color: rgb(208, 172, 122);
+}
+
+.tools-h1, .thanks-h1 {
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 2.4vh;
+    color: rgb(208, 172, 122);
+}
+
+.tools-p, .thanks-p, .inspiration-text, .made-with {
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 2vh;
+    color: rgb(208, 172, 122);
+}
+
+/*thanks-p {
+  cursor: pointer;
+}*/
+
+.version-num {
+    margin-bottom: 0;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 1.7vh;
+    color: rgb(208, 172, 122);
+}
+
+.session-score, .this-score {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 24px;
+    color: rgb(208, 172, 122);
+}
+
+.new-best {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 24px;
+    color: rgb(208, 172, 122);
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: colorchange;
+}
+
+@keyframes colorchange {
+    30% {
+        color: rgb(250, 205, 108);
+        margin-left: 20%;
+        transform: rotate(10deg);
+    }
+
+    60% {
+        color: rgb(254, 116, 57);
+        margin-right: 20%;
+        transform: rotate(-10deg);
+    }
+
+    90% {
+        color: rgb(93, 76, 147);
+    }
+}
+
+.lost-p {
+    margin-top: 0;
+    font-family: 'Bubblegum Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    font-size: 12px;
+    color: rgb(208, 172, 122);
+}
+
+.gameover-text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    color: rgb(208, 172, 122);
+    text-align: center;
+}
+
+.restart-btn, .tweet-btn, .reset-btn {
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    width: 100px;
+    margin: auto;
+    padding: .5em;
+    border: 1px solid rgb(161, 92, 119);
+    border-radius: 5px;
+    background-color: rgb(250, 248, 249);
+    color: rgb(208, 172, 122);
+    cursor: pointer;
+    text-align: center;
+}
+
+.sound-on, .sound-off {
+    font-family: 'Bubblegum Sans';
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: .5em;
+    border: 1px solid rgb(161, 92, 119);
+    border-radius: 5px;
+    background-color: rgb(250, 248, 249);
+    color: rgb(208, 172, 122);
+    cursor: pointer;
+    text-align: center;
+}
+
+.sound-on {
+    display: block;
+}
+
+.sound-off {
+    display: none;
+}
+
+.home-btn {
+    display: inline-block;
+    margin-top: 1em;
+    color: rgb(208, 172, 122);
+    cursor: pointer;
+    text-align: center;
+}
+
+.home-btn-white {
+    color: rgb(255, 255, 255);
+}
+
+.tweet-btn {
+    margin-bottom: 8px;
+}
+
+.restart-btn {
+    margin-bottom: 8px;
+}
+
+.leaderboard-dismiss-btn, .dismiss-btn, .settings-dismiss-btn {
+    display: inline-block;
+    color: rgb(208, 172, 122);
+    cursor: pointer;
+}
+
+.about-btn, .settings-btn, .leaderboard-btn {
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(208, 172, 122);
+}
+
+.about-btn, .leaderboard-btn {
+    margin-right: 20px
+}
+
+.fa-times {
+    color: rgb(255, 255, 255);
+}

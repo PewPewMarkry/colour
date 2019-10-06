@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+Modified from a pen by Andrew Tanner <http://codepen.io/andrewtanner1987/pen/ezZJow>
+
+Favicon from Illustrio <https://illustrio.com/search/BJGpjOFBMl> licensed under CC 3.0 <https://creativecommons.org/licenses/by/3.0/>
+
+Licensed under MIT <https://opensource.org/licenses/MIT>
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Will your brain work with you or against you? FIND OUT NOW!!!">
+        <meta name="author" content="MarKry">
+        <link rel="icon" type="image/png" href="fhttps://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-32.png?1493194691604" sizes="32x32">
+        <link rel="icon" type="image/x-icon" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon.ico?1493194805233" sizes="16x16 32x32">
+    	  <link rel="icon" type="image/png" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-96.png?1493194747596" sizes="96x96">
+    	  <link rel="icon" type="image/png" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-192.png?1493194797105" sizes="192x192">
+    	  <link rel="manifest" href="/manifest.json">
+        <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-57.png?1493194713528">
+    	  <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-60.png?1493194721413">
+    	  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-72.png?1493194730925">
+    	  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-76.png?1493194740436">
+    	  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-114.png?1493194754412">
+    	  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-120.png?1493194763195">
+    	  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-144.png?1493194771854">
+    	  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-152.png?1493194778970">
+    	  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Ffavicon-180.png?1493194788376">
+    	  <meta name="apple-mobile-web-app-title" content="Colour">
+    	  <meta name="application-name" content="Colour">
+    	  <meta name="msapplication-TileColor" content="#ec5d57">
+    	  <meta name="msapplication-TileImage" content="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Fmstile.png?1493196652040">
+        <title>Colour - The Game</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <audio class="select">
+            <source src="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Fselect.wav?1493018876204" type="audio/wav">
+        </audio>
+        <audio class="rightansw">
+            <source src="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Frightansw.wav?1493018868789" type="audio/wav">
+        </audio>
+        <audio class="wrongansw">
+            <source src="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Fwrongansw.wav?1493018884275" type="audio/wav">
+        </audio>
+        <audio class="back">
+            <source src="https://cdn.glitch.com/266f2b03-129f-49a6-80bb-1e10fc5e6075%2Fback.wav?1493018861086" type="audio/wav">
+        </audio>
+        <div class="container">
+            <div class="heading">
+                <div class="info-container">
+                    <div class="score-container">
+                        <div class="score">
+                            Score <span class="score-value"></span>
+                        </div>
+                    </div>
+                    <div class="best-score-container">
+                        <div class="best-score">
+                            Best <span class="best-score-value"></span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="title">COLOUR</h1>
+                <div class="timer-container">
+                    <div class="timer"></div>
+                </div>
+                <p class="game-desc">Touch the color <strong>NOT</strong> the word</p>
+            </div>
+            <div class="start-btn">
+                <i class="fa fa-play fa-2x"></i>
+            </div>
+            <p class="current-coloredword"></p>
+            <div class="game-container">
+                <p class="choices-container"></p>
+                <div class="gameover-container">
+                    <div class="modal">
+                        <p class="gameover-text">Game Over!</p>
+                        <p class="new-best">NEW BEST!</p>
+                        <p class="session-score">Score <span class="this-score"></span></p>
+                        <p class="lost-p">You lost <span class="lost-times"></span> <span class="lost-grammar"></span></p>
+                        <div class="tweet-btn"><i class="fa fa-twitter"></i> your score</div>
+                        <div class="restart-btn">Try again!</div>
+                        <div class="home-btn">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <div class="home-btn-white">
+                                    <i class="fa fa-home fa-stack-1x"></i>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p class="leaderboard-btn">
+                    <i class="fa fa-trophy fa-2x"></i>
+                </p>
+                <p class="about-btn">
+                    <i class="fa fa-info-circle fa-2x"></i>
+                </p>
+                <p class="settings-btn">
+                    <i class="fa fa-cog fa-2x"></i>
+                </p>
+                <div class="leaderboard-container">
+                    <div class="leaderboard-modal">
+                        <p class="coming-soon">Coming Soon</p>
+                        <p class="leaderboard-dismiss-btn">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-times fa-stack-1x"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-container">
+                    <div class="about-modal">
+                        <p class="about-text">
+                            <i class="fa fa-twitter"></i> @PewPewMarkry</p>
+                        <p class="inspiration-text">Inspired by Brain Games</p>
+                        <p class="made-with">Made with <i class="fa fa-heart-o"></i> and <i class="fa fa-coffee"></i></p>
+                        <p class="tools-h1">Tools and resources used</p>
+                        <p class="tools-p">Sublime Text, <i class="fa fa-google"></i> Google Fonts (Bubblegum Sans), <i class="fa fa-font-awesome"></i> Font Awesome by Dave Gandy, <i class="fa fa-apple"></i> Mac, ChipTone by SFB Games</p>
+                        <p class="thanks-p"></p>
+                        <p class="version-num">Version 1.00</p>
+                        <p class="dismiss-btn">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-times fa-stack-1x"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-modal">
+                        <div>
+                            <p class="sound-off">Sound OFF</p>
+                            <p class="sound-on">Sound ON</p>
+                        </div>
+                        <p class="reset-btn">Reset stats</p>
+                        <p class="settings-dismiss-btn">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x"></i>
+                                <i class="fa fa-times fa-stack-1x"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="/html_manager.js"></script>
+        <script type="text/javascript" src="/event_manager.js"></script>
+        <script type="text/javascript" src="/game_manager.js"></script>
+        <script src="https://stats.diet/tokens/d4a8fc1" async></script>
+    </body>
+</html>
