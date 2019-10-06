@@ -1,0 +1,45 @@
+var element = {
+    scoreContainer: document.querySelector('.score-container'),
+    scoreValueContainer: document.querySelector('.score-value'),
+    bestScoreContainer: document.querySelector('.best-score'),
+    bestScoreValue: document.querySelector('.best-score-value'),
+    timerContainer: document.querySelector('.timer-container'),
+    timer: document.querySelector('.timer'),
+    titleContainer: document.querySelector('.title'),
+    gameInfo: document.querySelector('.game-desc'),
+    startBtn: document.querySelector('.start-btn'),
+    footer: document.querySelector('.footer'),
+    leaderboardContainer: document.querySelector('.leaderboard-container'),
+    leaderboardBtn: document.querySelector('.leaderboard-btn'),
+    dismissLeaderboardBtn: document.querySelector('.leaderboard-dismiss-btn'),
+    aboutContainer: document.querySelector('.about-container'),
+    aboutBtn: document.querySelector('.about-btn'),
+    dismissAboutBtn: document.querySelector('.dismiss-btn'),
+    settingsContainer: document.querySelector('.settings-container'),
+    soundOff: document.querySelector('.sound-off'),
+    soundOn: document.querySelector('.sound-on'),
+    resetBtn: document.querySelector('.reset-btn'),
+    settingsBtn: document.querySelector('.settings-btn'),
+    dismissSettingsBtn: document.querySelector('.settings-dismiss-btn'),
+    coloredWordContainer: document.querySelector('.current-coloredword'),
+    choicesContainer: document.querySelector('.choices-container'),
+    gameoverContainer: document.querySelector('.gameover-container'),
+    lostTimes: document.querySelector('.lost-times'),
+    deadGrammar: document.querySelector('.lost-grammar'),
+    newBest: document.querySelector('.new-best'),
+    thisScore: document.querySelector('.this-score'),
+    tweetBtn: document.querySelector('.tweet-btn'),
+    restartBtn: document.querySelector('.restart-btn'),
+    goHome: document.querySelector('.home-btn'),
+    //glitch: document.querySelector('.thanks-p'),
+};
+var names = ['Purple', 'Orange', 'Red', 'Green', 'Yellow'];
+var colors = ['rgb(98, 81, 239)', 'rgb(235, 148, 52)', 'rgb(234, 95, 103)', 'rgb(78, 150, 137)', 'rgb(255, 192, 0)'];
+var timeout = [];
+var timer = [];
+var soundeffect = {
+    select: document.querySelector('.select'),
+    rightansw: document.querySelector('.rightansw'),
+    wrongansw: document.querySelector('.wrongansw'),
+    back: document.querySelector('.back'),
+};
